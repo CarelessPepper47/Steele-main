@@ -256,7 +256,7 @@ let decision;
 
 let combat; 
 
-let steps = 0;
+let steps = 1;
 
 function rollDice() {
     steps++

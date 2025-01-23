@@ -6,6 +6,12 @@
     color: red;
 }
 
+#gui {
+    display: block;
+    margin: auto;
+
+}
+
 .fotka {
     height: 60%;
     width: 60%;

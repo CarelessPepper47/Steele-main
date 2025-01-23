@@ -196,9 +196,9 @@ for (let i = 0; i < monsterNames.length; i++) {
     krakenCreated = true; // Set flag to true after creating Kraken
   }
   
-  if (krakenCreated === true) {
-    monsterNames.remove("Kraken")
-  }
+//   if (krakenCreated === true) {
+//     monsterNames.remove("Kraken")
+//   }
 
   let monster = {
     monsterName: monsterName,
@@ -256,7 +256,7 @@ let decision;
 
 let combat; 
 
-let steps = 1;
+let steps = 0;
 
 function rollDice() {
     steps++

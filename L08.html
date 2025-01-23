@@ -1,0 +1,127 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lekcja 8 - Callbacks & Array Methods</title>
+    <link rel="stylesheet" href="./main.css" />
+    <link rel="stylesheet" href="./moje.css" />
+    <script src="L08.js"></script>
+  </head>
+  <body>
+    <main>
+      <section>
+        <h1 class="text-3xl m-5 font-semibold">1. Incroduction</h1>
+        <p>- forEach</p>
+        <p>- map</p>
+        <p>- filter</p>
+        <p>- find</p>
+        <p>- reduce</p>
+        <p>- some</p>
+        <p>- every</p>
+        <div class="flex flex-col border-2 bg-black/80 text-white p-5">
+          <p class="kom">
+            there is boing to be a topic about
+            <span class="disclaimer">ARROW functions</span>
+          </p>
+          <p>
+            const words = ["spray", "limit", "kupalabongo", "dupa", "elite",
+            "mleko", "zupamleczna", "jajajajajajaj"]
+          </p>
+          <p>const result = words.filter(word => word.length > 6)</p>
+          <p>
+            console.log(result)
+            <span class="kom">
+              // ["kupalabongo", "zupamleczna", "jajajajajajaj"]</span
+            >
+          </p>
+          <hr class="my-5" />
+          <p class="kom">forEach</p>
+          <p class="disclaimer">L08.js:1</p>
+          <hr class="my-5" />
+          <p class="kom">
+            map - takes an array, and MODIFIES it, making a brand new array
+          </p>
+          <p>const text = ["rofl", "lol", "omg"]</p>
+          <p>const textCaps = texts.map(function (t) {</p>
+          <p>return t.toUpperCase();</p>
+          <p>})</p>
+          <p>texts; <span class="kom"> // ["rofl", "lol", "omg"]</span></p>
+          <p>caps; <span class="kom"> // ["ROFL", "LOL", "OMG"]</span></p>
+          <p class="disclaimer">L08.js:48</p>
+        </div>
+      </section>
+      <section>
+        <h1 class="text-3xl m-5 font-semibold">2. Arrow Functions</h1>
+        <div class="flex flex-col border-2 bg-black/80 text-white p-5">
+          <p>const square = (x) => {</p>
+          <p>return x * x</p>
+          <p>}</p>
+          <p>const sum = (x, y) => {</p>
+          <p>return x + y</p>
+          <p>}</p>
+          <hr class="my-5" />
+          <p>
+            const isEven0 = function (num) {
+            <span class="kom"> // regular function expression</span>
+          </p>
+          <p>return num % 2 === 0;</p>
+          <p>}</p>
+          <p>
+            const isEven1 = (num) => {
+            <span class="kom">
+              // arrow function with parens around parameters</span
+            >
+          </p>
+          <p>return num % 2 === 0;</p>
+          <p>}</p>
+          <p>
+            const isEven2 = num => {
+            <span class="kom"> // no parens around parameter</span>
+          </p>
+          <p>return num % 2 === 0;</p>
+          <p>}</p>
+          <p>
+            const isEven3 = num => (
+            <span class="kom"> // implicit return</span>
+          </p>
+          <p>num % 2 === 0</p>
+          <p>)</p>
+          <p>
+            const isEven4 = num => num % 2 === 0;<span class="kom">
+              // one-liner implicit return</span
+            >
+          </p>
+        </div>
+      </section>
+      <section>
+        <h1 class="text-3xl m-5 font-semibold">
+          3. setTimeout/setInteval + every/some Methods
+        </h1>
+        <div class="flex flex-col border-2 bg-black/80 text-white p-5">
+          <p>
+            setTimeout(() => console.log("Minęło 5 sekund."), 5000)
+            <span class="kom"> // po 5 sekundach sie wyprintuje</span>
+          </p>
+          <p>
+            const interwal = setInterval(() =>
+            console.log(Math.floor(Math.random() * 10)), 5000)
+            <span class="kom"> // will execute every 5 seconds</span>
+          </p>
+          <p class="kom">clearInterval(interwal)</p>
+          <hr class="my-5" />
+          <p class="disclaimer">L08.js:208</p>
+        </div>
+      </section>
+      <section>
+        <h1 class="text-3xl m-5 font-semibold">4. Reduce</h1>
+        <p>
+          Executes a reducer function on each element of the array, resulting in
+          a <span class="disclaimer">single value</span>
+        </p>
+        <div class="flex flex-col border-2 bg-black/80 text-white p-5">
+          <p class="disclaimer">L08.js:238</p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

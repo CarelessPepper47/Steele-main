@@ -1,0 +1,93 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lekcja 6 - Functions</title>
+    <link rel="stylesheet" href="./main.css" />
+    <link rel="stylesheet" href="./moje.css" />
+    <script src="L06.js"></script>
+  </head>
+  <body>
+    <main>
+      <section>
+        <h1 class="text-3xl m-5 font-semibold">1. Introduction</h1>
+        <div class="flex flex-col border-2 bg-black/80 text-white p-5">
+          <p>let die;</p>
+          <hr class="my-5" />
+          <p>
+            function app() { <span class="kom"> // start of the function</span>
+          </p>
+          <p>die = Math.floor(Math.random() * 6) + 1</p>
+          <p class="disclaimer">
+            updateDice()
+            <span class="kom">
+              // another function that updates the value of the die</span
+            >
+          </p>
+          <p>}</p>
+          <p>app() <span class="kom"> // this activates the function</span></p>
+          <div class="m-auto flex flex-col">
+            <button onclick="app()">Roll a Die</button>
+            <p class="disclaimer">
+              this button also activaes the function, automatically updating the
+              innerText in html; more at L06.js
+            </p>
+          </div>
+          <p>Die: <span id="roll">0</span></p>
+        </div>
+      </section>
+      <section>
+        <h1 class="text-3xl m-5 font-semibold">2. Arguments for functions</h1>
+        <p>
+          We've seen functions with arguments before; ie: "hello".indexOf("o")
+          <span class="kom"> // 4</span>
+        </p>
+        <p>
+          Or another: [1, 2, 3].push(4)
+          <span class="kom"> // [1, 2, 3, 4]</span>
+        </p>
+        <p>
+          And most used: console.log("dupa")
+          <span class="kom"> // dupa</span>
+        </p>
+        <div class="flex flex-col border-2 bg-black/80 text-white p-5">
+          <p>greet(Tim) <span class="kom"> // Hi Tim</span></p>
+          <p>greet(Anya) <span class="kom"> // Hi Anya</span></p>
+          <p class="my-2">avarage(3, 2, 5, 6) <span class="kom"> // 4</span></p>
+          <p>average(20, 25) <span class="kom"> // 22.5</span></p>
+          <hr class="my-5" />
+          <p>function greet(person) {</p>
+          <p>console.log(`Hi ${person}`)</p>
+          <p>}</p>
+          <hr class="my-5" />
+          <section class="flex flex-col">
+            <button onclick="giveNumberForDie()">Roll a Better Die</button>
+            <p class="text-center">
+              You picked <span id="sides">0</span> sides:
+              <span id="rolled">0</span>
+            </p>
+            <button onclick="reset()">Reset the die</button>
+          </section>
+          <p>function greet(firstName, lastName) {</p>
+          <p>console.log(`Hi ${firstName}, your surname is ${lastName}`)</p>
+          <p>}</p>
+          <p>
+            greet("George", "Clooney")
+            <span class="kom"> // Hi George Clooney</span>
+          </p>
+          <p class="disclaimer">More examples in L06.js</p>
+        </div>
+      </section>
+      <section>
+        <h1 class="text-3xl m-5 font-semibold">3. Return keyword</h1>
+        <p class="w-1/2">
+          Normal functions are just printing out thing that you CANT reuse if
+          you dont use <span class="disclaimer">return</span> keyword, which can
+          save a variable to be used later, without executing the function
+          again. It also stops the executuon of a function.
+        </p>
+        <div class="flex flex-col border-2 bg-black/80 text-white p-5"></div>
+      </section>
+    </main>
+  </body>
+</html>

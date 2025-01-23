@@ -1,0 +1,120 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lekcja 5 - Loops</title>
+    <link rel="stylesheet" href="./main.css" />
+    <link rel="stylesheet" href="./moje.css" />
+    <script src="L05.js"></script>
+  </head>
+  <body>
+    <main>
+      <section>
+        <h1 class="text-3xl m-5 font-semibold">1. Introduction</h1>
+        <div class="flex flex-col border-2 bg-black/80 text-white p-5">
+          <p>for (let i = 1; i <= 10; i++) {}</p>
+          <p class="kom">
+            for loop (starts at i (1); i stops at 10; add 1 to i each time)
+          </p>
+          <p class="disclaimer">Much more examples in L05.js</p>
+        </div>
+        <p>
+          So basically, for loop in the 1st phase we make a variable JUST for
+          the loop, usually its "i"; middle part is a boolean expression, and
+          will continue to execute as long as its true (i (1) IS less than 10,
+          therefore its true); the last part is updating the value of i
+        </p>
+      </section>
+      <section>
+        <h1 class="text-3xl m-5 font-semibold">2. Nested Loops</h1>
+        <div class="flex flex-col border-2 bg-black/80 text-white p-5">
+          <p>let <span class="text-blue-400">przyklad</span> = "Z dupy";</p>
+          <p>
+            for (<span class="text-green-400">i</span> = 0;
+            <span class="text-green-400">i</span> <= 5;
+            <span class="text-green-400">i</span>++) {
+          </p>
+          <p class="ml-5">
+            console.log("Outer: Gówno", <span class="text-green-400">i</span>);
+          </p>
+          <p class="ml-5">
+            for (<span class="text-red-400">j</span> = 0;
+            <span class="text-red-400">j</span> <
+            <span class="text-blue-400">przyklad</span>.length;
+            <span class="text-red-400">j</span>++) {
+          </p>
+          <p class="ml-10">
+            console.log("Inner:",
+            <span class="text-blue-400">przyklad</span>[<span
+              class="text-red-400"
+              >j</span
+            >])
+          </p>
+          <p class="ml-5">}</p>
+          <p class="">}</p>
+        </div>
+        <p>For each Outer loop, every Inner loop completes its full cycle</p>
+      </section>
+      <section>
+        <h1 class="text-3xl m-5 font-semibold">3. While Loops</h1>
+        <div class="flex flex-col border-2 bg-black/80 text-white p-5">
+          <p>let num = 0;</p>
+          <p class="mt-5">while (num < 5) {</p>
+          <p>console.log(num);</p>
+          <p>num++;</p>
+          <p>}</p>
+        </div>
+      </section>
+      <section>
+        <h1 class="text-3xl m-5 font-semibold">4. For... Of Loops</h1>
+        <div class="flex flex-col border-2 bg-black/80 text-white p-5">
+          <p>for (let index of "hello world")</p>
+          <p>
+            console.log(`${index}`)
+            <span class="kom"> // h, e, l, l, o, , w, o, r, l, d</span>
+          </p>
+          <p class="disclaimer">more in L05.js:160</p>
+        </div>
+      </section>
+      <hr class="my-5" />
+      <section>
+        <h1 class="text-3xl m-5 font-semibold">5. Iterating over Objects</h1>
+        <p>
+          Arrays, even tho they are objects, are iterated by loop command for...
+          OF. Iterating over Objects is different : for (let
+          <span class="text-red-400">key IN</span> object)
+        </p>
+        <div class="flex flex-col border-2 bg-black/80 text-white p-5">
+          <p>const midterms = {</p>
+          <p>Adam: 98,</p>
+          <p>Lol: 86,</p>
+          <p>Git: 69,</p>
+          <p>Goge: 24</p>
+          <p>}</p>
+          <hr class="my-5" />
+          <p>
+            for (let person <span class="text-red-400">in</span> midterms) {
+            <span class="kom">
+              // let person <span class="text-red-400">IN</span> midterms, NOT
+              OF</span
+            >
+          </p>
+          <p>
+            console.log(`${person}`)
+            <span class="kom"> // Adam, Lol, Git, Goge</span>
+          </p>
+          <p>
+            console.log(`${person} scored: ${midterms[person]}`)
+            <span class="kom">
+              // Adam scored: 98, Lol scored: 86, Git scored: 69, Goge scored:
+              24</span
+            >
+          </p>
+          <p>}</p>
+          <p class="disclaimer">more at L05.js:185</p>
+        </div>
+      </section>
+      <button onclick="makeAGuess()">Make a Guess Game</button>
+    </main>
+  </body>
+</html>
